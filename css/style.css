@@ -1,0 +1,1457 @@
+.center {
+    width: 1200px;
+    margin: 0 auto;
+/*        background: rgb(128, 0, 128,0.3);*/
+}
+
+
+/*remove*/
+.mBtn,
+.closeBtn,
+.mSns,
+.fixedMenu,
+.visual_textBox > p,
+.mfootSns{
+    display: none;
+}
+/*scroll design*/
+
+
+
+/*nav*/
+
+header {
+    background: black;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    min-width: 1200px;
+
+}
+
+header > .center {
+    position: relative;
+    padding: 20px 0;
+/*    background: red;*/
+
+}
+
+.logo {
+    float: left;
+/*    margin-bottom: 30px;*/
+
+}
+
+.logo img {
+    width: 200px;
+    padding-bottom: 10px;
+}
+
+nav {
+    margin-top: -60px;
+    position: relative;
+}
+
+.navCenter {
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+#nav {
+    float: left;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+/*    background: red;*/
+/*    line-height: 45px;*/
+}
+
+#nav > li {
+    padding: 0 10px;
+    margin-left: 30px;
+}
+
+#nav li>a {
+    color: white;
+    padding: 0 10px;
+    font-size: 15px;
+    position: relative;
+}
+
+/*
+#nav>li:hover>a{
+    color: #c9c910;
+}
+*/
+#nav > li > a:after {
+    content: "";
+    display: none;
+    width: 0;
+    height: 2px;
+    background: #c9c910;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+#nav > li:hover > a:after {
+    display: block;
+    width: 100%;
+}
+
+.sub {
+    display: none;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    line-height: 2;
+    z-index: 1000;
+    /*    background: red;*/
+}
+
+.sub > .subWrap {
+    width: 1400px;
+    margin: 0 auto;
+    padding: 20px 0 0 80px;
+
+}
+
+.subWrap > li {
+    float: left;
+}
+
+.subWrap ul {
+    padding-top: 10px;
+}
+
+.subWrap ul > li > a {
+    font-size: 13px;
+}
+
+#nav .subWrap > li > .subTitle {
+    font-weight: bold;
+    font-size: 16px;
+    color: #ccc;
+    padding-bottom: 3px;
+}
+
+#nav .subWrap a:hover {
+    color: #c9c910;
+}
+
+#nav > li:first-child:after {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 500px;
+    background: rgb(0, 0, 0, 0.9);
+    /*    background: blue;*/
+    position: absolute;
+    left: 0;
+    padding-top: 30px;
+    z-index: 10;
+}
+
+#nav > li:hover .sub {
+    display: block;
+}
+
+#nav > li:hover::after {
+    display: block;
+
+}
+
+
+.snsWrap {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 10000;
+
+}
+
+.snsWrap > li {
+    float: left;
+    padding-left: 15px;
+}
+
+.snsWrap i {
+    color: white;
+    font-size: 15px;
+}
+
+.snsWrap > li:hover i {
+    color: #ccc;
+}
+
+.navBg {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: white;
+    transition: all 300ms ease-in-out;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+    position: relative;
+
+    
+}
+
+.navBg > p {
+    color: #333;
+}
+.navBg> .bgClose {
+    border: none;
+    background: none;
+    outline: none;
+    position: absolute;
+    right: 50px;
+    top: 15px;
+}
+
+
+
+/*container*/
+/*#visual*/
+#visual {
+    height:80vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    min-width: 1200px;
+
+
+
+}
+
+.mBanner {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+
+}
+
+.mBanner > li {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mBanner > li:first-child {
+    display: block;
+    background-image: url(../imgs/banner1.jpg);
+}
+.mBanner > li:nth-child(2){
+    background-image: url(../imgs/banner2.jpg);
+}
+.mBanner > li:nth-child(3){
+    background-image: url(../imgs/banner3.jpg);
+}
+
+.mBanner > li:nth-child(4){
+    background-image: url(../imgs/banner9.png);
+}
+
+
+/*
+.mBanner > li> img {
+    width: 100%;
+
+   
+}
+*/
+
+
+
+.bannerBtn {
+    position: absolute; 
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+/*    background: pink;    */
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.bannerBtn>li>a{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    text-indent: -9999px;
+    margin: 0 5px;
+
+}
+.bannerBtn>li.active>a {
+    background: #fff4be;
+    width: 30px;
+    border-radius: 30px;
+}
+
+
+.visual_textBox {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+
+}
+
+.visual_textBox > strong {
+    display: block;
+    margin-top: 100px;
+    font-size: 50px;
+}
+
+.visual_textBox > a {
+    
+    display: inline-block;
+    font-size: 16px;
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    border: 4px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: bold;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.visual_textBox > a:hover {
+    background: white;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+#visual > .center > .visual_textBox strong,
+#visual > .center > .visual_textBox a,
+#visual > .center > .snsWrap i {
+    color: white;
+}
+
+/*product*/
+#container .title {
+    font-size: 30px;
+}
+
+#products {
+    overflow: hidden;
+    position: relative;
+   
+
+}
+
+#products .title {
+    padding: 100px 0 50px 0;
+    text-align: center;
+}
+
+
+.product {
+    text-align: center;
+    width: 200%;
+    height: 200px;
+    padding: 50px 0;
+/*    margin-left: -100%;*/
+    transition: 1s;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.product > li {
+    width: 33.33%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 15px;
+}
+
+.product > li > a {
+    display: block;
+    width: 100%;
+    height: 200px;
+    transition: all 300ms ease-in;
+
+}
+
+.product > li > a > img {
+    width: 200px;
+    height: 200px;
+
+}
+
+.product > li > a:hover img {
+    transform: scale(1.1);
+}
+
+.product .p_description {
+    width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.product .p_description::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: black;
+    position: absolute;
+    bottom: 0;
+}
+.arrow {
+    z-index: 100;
+}
+.arrow>li {
+    position: absolute;
+    bottom: 150px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #ccc;
+    border-left: 2px solid #ccc;
+    z-index: 99;
+    text-indent: -9999px;
+    background: rgb(255, 255, 255, 0);
+}
+.arrow>li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+
+.left{
+
+    transform: rotate(-45deg);
+    left: 20px;
+    margin-left: 20px;
+    background: red;
+
+}
+
+.right{
+    transform: rotate(135deg);
+    right: 30px;
+    margin-right: 20xp;
+}
+
+#arrow1:checked ~ .product {
+    margin-left: 0;
+}
+
+#arrow2:checked ~ .product {
+    margin-left: -99.9999%;
+}
+
+
+
+
+.scrollBox {
+    position: relative;
+    width: 70%;
+    height: 4px;
+    background: #ccc;
+    margin: 0 auto;    
+
+}
+
+.scroll {
+    width: 50%;
+    height: 4px;
+    background: #656363;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 1s;
+}
+
+
+
+
+/*banner*/
+#banner {
+    width: 100%;
+    min-width: 1200px;
+    height: 500px;
+    background: url(../imgs/banner11.jpg) fixed;
+    background-size: cover;
+    margin: 100px 0;
+}
+
+.banner_textBox {
+    text-align: center;
+    height: 500px;
+    padding-top: 180px;
+
+}
+
+.banner_textBox > strong {
+    font-size: 70px;
+    color: white;
+
+}
+
+.banner_textBox > a {
+    display: block;
+    width: 250px;
+    line-height: 1.7;
+    border: 3px solid white;
+    border-radius: 5px;
+    font-size: 30px;
+    font-weight: 200;
+    color: white;
+    margin: 20px 0 0 50%;
+    transform: translateX(-50%);
+}
+
+.banner_textBox > a:hover {
+    background: white;
+}
+
+.banner_textBox > a:hover p {
+    color: black;
+    font-weight: bold;
+}
+
+
+/*makeup product*/
+.makeups {
+    height: 740px;
+}
+
+.makeup_categoryImg {
+    width: 35%;
+    height: 740px;
+    background: url(../imgs/makeup.png) no-repeat center center;
+    float: left;
+   
+}
+
+.makeup {
+    float: right;
+    width: 65%;
+    height: 700px;
+    
+    
+}
+
+.makeup > li {
+    float: left;
+    height: 350px;
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    margin: 10px;
+  
+
+}
+
+.makeup > li > a {
+    display: block;
+    height: 240px;
+    background: white;
+
+}
+
+.makeup > li > a > img {
+    width: 160px;
+    height: 160px;
+    padding-top: 30px;
+    transition: all 200ms ease-in;
+}
+
+
+.makeup > li > a:hover img {
+    transform: scale(1.1);
+}
+
+.makeup .m_description {
+
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px 10px 0 15px;
+    
+}
+
+.makeup .m_description > .name {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    opacity: 1;
+}
+
+.makeup .m_description > .type {
+    font-size: 12px;
+    color: #333;
+}
+
+.makeup .m_description > .feature {
+    font-size: 12px;
+    color: #919191;
+}
+
+.makeup .m_description > .priceBox {
+    padding-top: 3px;
+}
+
+.makeup .m_description > .priceBox p {
+    color: black;
+    font-size: 13px;
+}
+
+.makeup .m_description > .priceBox span {
+    font-size: 12px;
+    color: #333;
+}
+
+.addbag {
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    line-height: 30px;
+    margin-top: 5px;
+    
+
+}
+
+.addbag span {
+    margin-left: 5px;
+    font-size: 15px;
+}
+
+.addbag:hover {
+    border: 1px solid black;
+
+}
+
+.addbag:hover a {
+    font-weight: bold;
+}
+
+
+
+
+/*new products*/
+
+#newProducts {
+    margin: 100px 0;
+    width: 100%;
+}
+
+#newProducts > .center > .title {
+    text-transform: uppercase;
+    position: relative;
+    line-height: 30px;
+}
+
+#newProducts > .center > .title > span {
+    font-size: 15px;
+    color: #333;
+}
+
+#newProducts > .center > .title::before {
+    content: "";
+    display: block;
+    width: 780px;
+    height: 1px;
+    background: #333;
+    position: absolute;
+    top: 15px;
+    right: 5px;
+
+}
+
+.newProduct {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newProduct > div {
+    margin: 0 10px;
+    box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.newImg {
+    width: 33.33%;
+    height: 305px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    position: relative;
+
+}
+
+.leftImg {
+    background-image: url(../imgs/banner2.jpg)    ;
+    background-size: 100% 100%;
+
+}
+
+.middleImg {
+    background-image: url(../imgs/category_img2.png);
+    background-size: 100% 100%;
+}
+
+.rightImg {
+    background-image: url(../imgs/prince_shaving_cream_2019.jpg);
+    background-size: 100% 100%;    
+}
+
+.Img_text {
+    margin-top: 150px;
+    font-size: 35px;
+    display: none;
+}
+
+.Img_text::before {
+    content: "";
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgb(240, 238, 238, 0.2);
+    position: absolute;
+    top: 0;
+}
+
+.newProduct p {
+    font-size: 20px;
+    color: white;
+}
+
+.newProduct a {
+    display: block;
+    width: 150px;
+    height 50px;
+    color: white;
+    border: 1px solid white;
+    margin: 25px 0 0 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.newProduct a:hover {
+
+    background: white;
+
+}
+
+.newProduct a:hover p {
+    color: black;
+    font-weight: bold;
+}
+
+.newProduct a > p {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.newImg:hover .Img_text::before,
+.newImg:hover .Img_text {
+    display: block;
+}
+
+/*store loacator*/
+
+#locator {
+    margin-top: 150px;
+}
+
+.locator_categoryImg {
+    width: 100%;
+    height: 500px;
+    background: black url(../imgs/shop3.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.locator_textBox {
+    float: right;
+    padding: 70px 60px;
+    width: 450px;
+    height: 500px;
+    background: rgb(0, 0, 0, 0.8);
+    box-sizing: border-box;
+
+}
+
+.locator_textBox > strong {
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: white;
+
+}
+
+.locator_textBox > p {
+    font-size: 16px;
+    color: white;
+    margin: 20px 0;
+}
+
+.locatorBtn {
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid white;
+    font-size: 14px;
+    color: white;
+    margin-top: 30px;
+    padding: 10px;
+
+
+}
+
+.locatorBtn > a {
+    color: white;
+}
+
+.locatorBtn i {
+    padding-left: 140px;
+
+}
+
+.locatorBtn:hover {
+    background: white;
+    color: aliceblue;
+}
+
+.locatorBtn:hover a {
+    color: #333;
+}
+
+/*footer*/
+footer {
+    min-width: 1200px;
+    margin-top: 60px;
+}
+.footTop {
+    background: rgb(255, 245, 245);
+    text-align: center;
+    padding: 20px 0;
+}
+.footTop p {
+    margin: 10px 0;
+    color: black;
+}
+
+.subscribe {
+    width: 400px;
+    height: 30px;
+    background: white;
+    margin: 20px 0 20px 50%;
+    transform: translateX(-50%);
+    position: relative;
+
+}
+
+.subscribe input {
+    display: block;
+    border: none;
+    background: none;
+     line-height: 30px;
+    padding-left: 10px;
+}
+
+.subscribe a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    box-sizing: border-box;
+    
+}
+.footBottom>.center {
+    position: relative;
+    text-align: center;
+}
+.footBottom {
+    background: rgb(0, 0, 0);
+    padding: 15px 0;
+/*    height: 100px;*/
+}
+
+.footBottom a,
+p {
+    color: white;
+    font-size: 16px;
+}
+
+.footBottom p {
+/*    float: left;*/
+    position: absolute;
+    left: 0;
+}
+.footMenu {    
+
+}
+.footMenu>li {
+    display: inline-block;
+}
+.footMenu>li {
+    margin: 0 10px;
+}
+.footSns {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+}
+
+.footSns > li {
+    float: left;
+    padding: 0 20px;
+}
+
+.footSns > li i {
+    font-size: 20px;
+}
+
+.footBottom p:hover,
+.footBottom li > a:hover {
+    text-decoration: underline;
+    color: #c9c910;
+}
+
+
+/*top box*/
+
+
+.topBox {
+    position: fixed;
+    bottom: 102px;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    background: rgb(244, 222, 226, 0.5);
+    text-align: center;
+}
+
+.topBox > a {
+    font-size: 15px;
+}
+
+
+
+
+
+/*mobile 767px 이하*/
+@media screen and (max-width:767px) {
+    /*    1.제거하기*/
+    #newProducts > .center > .title::before,
+    .topBox{
+        display: none;
+    }
+    
+
+    /*    2. 100%*/
+
+    #visual,
+    #banner,
+    footer,
+    header{
+        min-width: 100%;
+    }
+
+    .center,
+    .newImg,
+    .footTop,
+    header>.center,
+    .footBottom>.center
+    {
+        width: 100%;
+    }
+    
+    .mBanner {
+        width: 400%;
+    }
+
+
+    /*    3.보이기*/
+
+    
+    .closeBtn,
+    .mBtn,
+    .mSns {
+        display: block;
+    }
+
+    /*    common*/
+    #products .title,
+    #newProducts > .center > .title {
+        text-align: center;
+        font-size: 17px;
+        padding: 30px 0 0 10px;
+    }
+
+    /*header*/
+
+    header {
+        position: fixed;
+        z-index: 100;
+        text-align: center;
+        height: 60px;
+
+    }
+
+   
+    .navCenter {
+/*        left: -100%;*/
+        width: 70%;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        background: #000000;
+        top: 0px;
+        display: block;
+        text-align: left;
+
+    }
+    .navCenter>div {
+        width: 110%;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    #nav {
+        float: none;
+        text-align: left;
+        flex-direction: column;
+        margin-bottom: 10px;
+        border-bottom: 1px solid white;
+        
+        
+    }
+    #nav>li {
+        margin: 10px 0;
+        padding: 0;
+        
+    }
+    #nav > li:hover > a:after {
+        display: none;
+    }
+    #nav > li:hover {
+        background: white;
+    }
+    #nav > li:hover >a {
+        color: black;
+    }
+    
+    .sub {
+        position: static;
+        background: black;
+    }
+    
+    .subWrap > li {
+        float: none;
+        text-indent: -50px;
+    }
+    .subWrap > li ul {
+        position: static;
+    }
+    .closeBtn {
+        padding: 10px;
+        margin: 20px 0;
+        border-bottom: 1px solid white;
+    }
+    .closeBtn img {
+        width 20px;
+        height: 20px;
+    }
+    .mSns {
+        margin-top: 30px;
+    }
+    .mSns>li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+    .mSns>li>a {
+        display: block;
+
+    }
+    .mSns>li i {
+        font-size: 20px;
+        color: white;  
+    }
+    
+    .mSns>li>a:hover i {
+        color: #a7a71d;
+    }
+    #navCenter:target {
+        left: -100%;
+    }
+
+
+    .logo {
+        float: none;
+        margin: 0 auto 30px;
+        width: 22%;
+/*        background: pink;*/
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    .mBtn {
+/*        display: block;*/
+        position: absolute;
+        left: 0;
+        top: 30px;
+        padding-left: 20px;
+
+
+    }
+
+    .mBtn > span {
+        margin-right: 10px;
+    }
+
+    .mBtn i {
+        font-size: 15px;
+        color: white;
+    }
+    .navBg {
+        margin-top: 10px;
+    }
+
+    .navBg > p {
+        font-size: 12px;
+    }
+
+    .snsWrap {
+        top: 30px;
+        padding-right: 10px;
+    }
+
+    /*    visual*/
+    
+    #visual {
+        height: 80vw;
+    }
+    .visual_textBox {
+/*       background: blue;*/
+    }
+    .visual_textBox > strong {
+        font-size: 30px;
+    }
+    .visual_textBox > a {
+        width: 200px;
+        font-size: 13px;
+        padding: 2px;
+        margin: 0;
+        
+        
+    }
+    .bannerBtn{
+        
+    }
+    .bannerBtn>li>a {
+        width: 10px;
+        height: 10px;
+    }
+    .bannerBtn>li.active>a {
+        width: 20px;
+    }
+    .mBanner > li> img {
+        height: 80vw;
+    }
+
+
+   
+
+    /*    prodcut*/
+    #products {
+        overflow-x: auto;
+    }
+    .product {
+/*        background: pink;*/
+        margin: 50px 0;
+        
+    }
+
+    .product>li {
+        margin-right: 50px;
+    }
+    .product > li > a > img {
+        width: 90%;
+        height: 90%;
+    }
+    .product .p_description {
+        
+    }
+    
+    .arrow {
+        width: 15px;
+        height: 15px;
+    }
+    .left {
+        left: 10px;
+        margin-left: 0;
+    }
+    .right {
+        right: 10px;
+        margin-right: 0;
+    }
+    .scrollBox {
+        display: none;
+        
+    }
+    .arrow {
+        display: none;
+    }
+/*banner*/
+    #banner {
+        background-repeat: no-repeat;
+        height: 80vw;
+    }
+    .banner_textBox {
+        padding-top: 150px;
+    }
+    .banner_textBox > strong {
+        font-size: 50px;
+    }
+    .banner_textBox > a {
+        width: 200px;
+    }
+    .banner_textBox > a>p {
+        color: white;
+    }
+/*    makeup*/
+    #makeups {
+    
+    }
+    .makeup {
+        box-sizing: border-box;
+        overflow: hidden;
+        overflow-x: auto;
+    }
+  
+    .makeup_categoryImg {
+        width: 100%;
+        height: 250px;
+        float: none;
+    }
+    .makeup {
+        width: 100%;
+        height: 100%;    
+        float: none;
+        display: flex;
+    }
+    .makeup>li {
+        float: none;
+    
+    }
+    
+/*    newproduct*/
+    .newProduct {
+        flex-wrap: wrap;
+    }
+    .newProduct > div {
+        margin: 10px auto;
+    }
+    .newImg {
+        width: 97%;
+    }
+    
+/*locator*/
+    .locator_categoryImg,
+    .locator_textBox{
+        height: 65vw;
+    }
+/*footer*/
+    footer {
+        padding-bottom: 65px;
+    }
+    
+    .footBottom{
+        background: white;
+    }
+    .subscribe {
+        width: 90%;
+    }
+
+    .footBottom p {
+        margin: 0;
+    }
+    .footBottom a,
+    p 
+    {
+       font-size: 12px;
+        color: black;
+    }
+    .footSns > li {
+        padding: 0;
+    }
+/*    fixed menu*/
+    .fixedMenu {
+        display: block;    
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: black;
+        text-align: center;
+        padding-top: 12px;
+    }
+    .fixedMenu>ul>li {
+        width: 25%;
+        float: left;
+    }
+    .fixedMenu a{
+        color: white;
+        font-size: 20px;
+    }
+    .fixedMenu a span {
+        display: block;
+        color: white;
+        margin: 10px 0; 
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width:480px) {
+/*    nav*/
+    .navBg {
+        overflow: hidden;
+    }
+/*    visual box*/
+    .visual_textBox > strong {
+        font-size: 20px;
+    }
+    .visual_textBox > a {
+        display: none;
+    
+    }
+    .visual_textBox > p {
+        display: block;
+        text-decoration: underline;
+    }
+    .visual_textBox > p>a {
+        color: white;
+    }
+    .c1,
+    .c2,
+    .c3,
+    .c4 {
+    width: 10px;
+    height: 10px;
+    top: 90px;
+}
+
+.c2 {
+    margin-top: 75px;
+}
+
+.c3 {
+    margin-top: 95px;
+}
+
+.c4 {
+    margin-top: 120px;
+}
+/*banner*/
+    #banner {
+        height: 60vw;
+    }
+    .banner_textBox {
+        padding-top: 50px;
+    }
+    .banner_textBox > strong {
+        font-size: 30px;
+    }
+    .banner_textBox > a {
+        width: 100px;
+    }
+    
+/*    makeup*/
+
+
+/*  new prodcuts*/
+    #locator {
+        margin-top: 0;
+    }
+    .locator_categoryImg, 
+    .locator_textBox {
+    }
+    .locator_textBox {
+        padding: 10px 0 10px 100px;
+    }
+    .locator_textBox > strong {
+        font-size: 20px;
+        margin: 0;
+    }
+    .locator_textBox > p {
+        font-size: 14px;
+    }
+/*    footer*/
+    
+    .footSns{
+        display: none;
+    }
+    .right {
+        float: right;
+        text-align: left;
+        padding-right: 10px;
+        margin-right: 20px;
+    }
+    .subscribe {
+        margin: 0;
+        transform: none;
+    }
+    .subscribe a{
+        width: 30%;
+        font-size: 10px;
+        padding-left: 5px;
+    }
+    .mfootSns {
+        display: block;
+        margin: 30px 0 0 10px;
+        float: left;
+        
+    }
+    .mfootSns>li {
+        display: inline-block;
+    }
+    .footBottom p {
+        margin-left: 20px;
+    }
+    .footMenu {
+        margin-left: 40px;
+    }
+    .footMenu>li {
+        margin: 0;
+    }
+    
+}
+

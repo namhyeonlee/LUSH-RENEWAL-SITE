@@ -1,0 +1,58 @@
+/*바깥 여백, 안쪽 여백 제거*/
+
+*,h1,h2,h3,h4,h5,h6,ul,ol,dl,li,dt,dd {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+body {
+    font-family: "lush_font", sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    color: black;
+    box-sizing: border-box;
+}
+.blind {
+    position: absolute;
+    top: -99999px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+hr {
+    display: none;
+}
+
+.clearFix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+address, i, em{
+    font-style: normal;
+}
+
+@font-face{
+    font-family:"lush_font";
+    src: url("../font/HelveticaNeueLTStd-Bd.woff") format("woff");
+    font-style: bold;
+}
+@font-face{
+    font-family: "lush_font";
+    src: url("../font/HelveticaNeueLTStd-Roman.otf") format("woff");
+    font-weight: normal;
+}
