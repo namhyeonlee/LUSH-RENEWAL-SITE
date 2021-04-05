@@ -995,6 +995,7 @@ p {
     
     .mBanner {
         width: 400%;
+        
     }
 
 
@@ -1036,6 +1037,7 @@ p {
         top: 0px;
         display: block;
         text-align: left;
+        z-index: 100;
 
     }
     .navCenter>div {
@@ -1148,6 +1150,9 @@ p {
     .navBg > p {
         font-size: 12px;
     }
+    .navBg>.bgClose{
+        right: 0;
+    }
 
     .snsWrap {
         top: 30px;
@@ -1173,9 +1178,7 @@ p {
         
         
     }
-    .bannerBtn{
-        
-    }
+    
     .bannerBtn>li>a {
         width: 10px;
         height: 10px;
@@ -1183,8 +1186,10 @@ p {
     .bannerBtn>li.active>a {
         width: 20px;
     }
-    .mBanner > li> img {
-        height: 80vw;
+    
+    .mBanner > li{
+        background-size: cover;
+        
     }
 
 
@@ -1426,7 +1431,7 @@ p {
         margin-right: 20px;
     }
     .subscribe {
-        margin: 0;
+        margin: 0 auto;
         transform: none;
     }
     .subscribe a{
@@ -1436,8 +1441,8 @@ p {
     }
     .mfootSns {
         display: block;
-        margin: 30px 0 0 10px;
-        float: left;
+        margin: 30px auto;
+        
         
     }
     .mfootSns>li {
